@@ -34,8 +34,9 @@ export class AddGameFormComponent {
   async ngOnInit() {
     this.logged = WebStorageUtil.get(Constants.LOGGED_IN_KEY);
     let userId = 0;
-    if (this.logged)
+    if (this.logged == true)
       userId = WebStorageUtil.get(Constants.LOGGED_USER).id;
+    
     let lastId = await this.entryService.getLastEntryId();
     this.entryService
       .getEntryByUserAndGame(userId, this.game.id)

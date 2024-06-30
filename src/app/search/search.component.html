@@ -16,7 +16,7 @@
   </div>
   <div class="results-box">
     <div class="row">
-      <div class="col m2 s6" *ngFor="let g of this.queriedGames">
+      <div class="col l3 m4 s6" *ngFor="let g of this.queriedGames">
         <app-game-container [routerLink]="['../games/', g.id]" [title]="this.games[g.id].title" [img]="this.games[g.id].image" [score]=0></app-game-container>
       </div>
     </div>

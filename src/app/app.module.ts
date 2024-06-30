@@ -14,7 +14,7 @@ import { GameComponent } from './game/game.component';
 import { SearchComponent } from './search/search.component';
 import { GameContainerComponent } from './list/game-container/game-container.component';
 import { AddGameFormComponent } from './add-game-form/add-game-form.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
@@ -35,6 +35,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    HttpClientJsonpModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable

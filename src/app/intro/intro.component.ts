@@ -32,8 +32,8 @@ export class IntroComponent implements OnInit {
             pokeTitle.innerHTML += pokemonData.name;
             pokeImg.src = pokemonData.sprites.front_default;
           })
-          .catch(error => console.error('Error fetching Pokémon species data:', error));
+          .catch(error => console.error('Erro:', error));
       })
-      .catch(error => console.error('Error fetching Pokémon details:', error));
+      .catch(error => console.error('Erro:', error));
   }
 }
