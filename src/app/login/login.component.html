@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row"><h1 class="title col s12 center-align">Faça login para acessar sua lista</h1></div>
+  <div class="form-div indigo lighten-4">
+    <div class="row">
+      <h2 class="col s9">FAZER LOGIN.</h2>
+      <h3 class="col s3 right-align red lighten-1">ENTRE COM SUA CONTA</h3>
+    </div>
+    <div class="row">
+      <form class="col s12" (ngSubmit)="onLogin()">
+        <div class="row">
+          <div class=" col s6">
+            <label for="input-username">Nome de usuário</label><br>
+            <input
+              id="input-username"
+              name="input-username"
+              type="text"
+              class="validate"
+              [(ngModel)]="this.loginUser.username"
+            />
+          </div>
+          <div class=" col s6">
+            <label for="input-password">Senha</label><br>
+            <input
+              id="input-password"
+              name="input-password"
+              type="password"
+              class="validate"
+              [(ngModel)]="this.loginUser.password"
+            />
+          </div>
+        </div>
+        <button class="btn waves-effect waves-light indigo darken-4 col12" type="submit" name="action">Fazer login</button>
+      </form>
+    </div>
+  </div>
+  <h2>OU, SE AINDA NÃO POSSUI UMA...</h2>
+  <a routerLink="../user" class="login-link">CRIE UMA CONTA</a>
+</div>
+

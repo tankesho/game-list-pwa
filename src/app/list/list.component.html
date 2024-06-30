@@ -1,0 +1,114 @@
+<div class="container">
+  <div class="row container">
+    <h1 class="title col s12 center-align">Lista de {{ this.user.username }}</h1>
+  </div>
+  <div class="status-box indigo lighten-4">
+    <div class="below-box row">
+      <div class="col s6 status-box-left">
+        <div class="row status-line">
+          <a (click)="scroll(playingDiv)"><img class="col m1 s3" src="assets/resources/images/playing-icon.png"><h3 class="list-link col m9 s9">Jogando</h3><h3 class="list-link col m2 s12">{{ this.gameCount[0] }}</h3></a>
+        </div>
+        <div class="row status-line">
+          <a (click)="scroll(playedDiv)"><img class="col m1 s3" src="assets/resources/images/played-icon.png"><h3 class="list-link col m9 s9">Zerados</h3><h3 class="list-link col m2 s12">{{ this.gameCount[1] }}</h3></a>
+        </div>
+        <div class="row status-line">
+          <a (click)="scroll(onHoldDiv)"><img class="col m1 s3" src="assets/resources/images/on-hold-icon.png"><h3 class="list-link col m9 s9">Em espera</h3><h3 class="list-link col m2 s12">{{ this.gameCount[2] }}</h3></a>
+        </div>
+        <div class="row status-line">
+          <a (click)="scroll(droppedDiv)"><img class="col m1 s3" src="assets/resources/images/dropped-icon.png"><h3 class="list-link col m9 s9">Droppados</h3><h3 class="list-link col m2 s12">{{ this.gameCount[3] }}</h3></a>
+        </div>
+        <div class="row status-line">
+          <a (click)="scroll(planToPlayDiv)"><img class="col m1 s3" src="assets/resources/images/plan-to-play-icon.png"><h3 class="list-link col m9 s9">Planejo jogar</h3><h3 class="list-link col m2 s12">{{ this.gameCount[4] }}</h3></a>
+        </div>
+      </div>
+      <div class="col s6">
+        <div>
+          <h3 class="list-link col m10 s12">Horas totais</h3><h3 class="list-link col m2 s12">{{ this.totalHours }}</h3>
+        </div>
+        <div>
+          <h3 class="list-link col m10 s12">Média de notas</h3><h3 class="list-link col m2 s12">{{ this.averageScore }}</h3>
+        </div>
+        <div>
+         <h3 class="list-link col m10 s12">Jogos ao total</h3><h3 class="list-link col m2 s12">{{ this.gameCount[5] }}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="lists-box">
+    <div #playingDiv class="status-scroll-box">
+      <div class="row status-header">
+        <div class="col m1 s2">
+          <img class="status-icon" src="assets/resources/images/playing-icon.png">
+        </div>
+        <h3 class="status-title col m3 s3">JOGANDO</h3>
+        <h3 class="col m8 s7 status-details right-align">{{ this.gameCount[0] }} jogos na categoria.</h3>
+      </div>
+      <h5 *ngIf="this.gameCount[0] == 0">Categoria vazia</h5>
+      <div class="scroll">
+        <div class="scroll-item" *ngFor="let e of entries">
+          <app-game-container [routerLink]="['../../games/', e.gameId]" *ngIf="e.category == 1" [title]="this.games[e.gameId].title" [img]="this.games[e.gameId].image" [score]="e.score"></app-game-container>
+        </div>
+      </div>
+    </div>
+    <div #playedDiv class="status-scroll-box">
+      <div class="row status-header">
+        <div class="col s1 m1 s2">
+          <img class="status-icon" src="assets/resources/images/played-icon.png">
+        </div>
+        <h3 class="status-title col m3 s3">ZERADOS</h3>
+        <h3 class="col m8 s7 status-details right-align">{{ this.gameCount[1] }} jogos na categoria.</h3>
+      </div>
+      <h5 *ngIf="this.gameCount[1] == 0">Categoria vazia</h5>
+      <div class="scroll">
+        <div class="scroll-item col" *ngFor="let e of entries">
+          <app-game-container [routerLink]="['../../games/', e.gameId]" *ngIf="e.category == 2" [title]="this.games[e.gameId].title" [img]="this.games[e.gameId].image" [score]="e.score"></app-game-container>
+        </div>
+      </div>
+    </div>
+    <div #onHoldDiv class="status-scroll-box">
+      <div class="row status-header">
+        <div class="col m1 s2">
+          <img class="status-icon" src="assets/resources/images/on-hold-icon.png">
+        </div>
+        <h3 class="status-title col m3 s3">EM ESPERA</h3>
+        <h3 class="col m8 s7 status-details right-align">{{ this.gameCount[2] }} jogos na categoria.</h3>
+      </div>
+      <h5 *ngIf="this.gameCount[2] == 0">Categoria vazia</h5>
+      <div class="scroll">
+        <div class="scroll-item" *ngFor="let e of entries">
+          <app-game-container [routerLink]="['../../games/', e.gameId]" *ngIf="e.category == 3" [title]="this.games[e.gameId].title" [img]="this.games[e.gameId].image" [score]="e.score"></app-game-container>
+        </div>
+      </div>
+    </div>
+    <div #droppedDiv class="status-scroll-box">
+      <div class="row status-header">
+        <div class="col m1 s2">
+          <img class="status-icon" src="assets/resources/images/dropped-icon.png">
+        </div>
+        <h3 class="status-title col m3 s3">DROPPADOS</h3>
+        <h3 class="col m8 s7 status-details right-align">{{ this.gameCount[3] }} jogos na categoria.</h3>
+      </div>
+      <h5 *ngIf="this.gameCount[3] == 0">Categoria vazia</h5>
+      <div class="scroll">
+        <div class="scroll-item" *ngFor="let e of entries">
+          <app-game-container [routerLink]="['../../games/', e.gameId]" *ngIf="e.category == 4" [title]="this.games[e.gameId].title" [img]="this.games[e.gameId].image" [score]="e.score"></app-game-container>
+        </div>
+      </div>
+    </div>
+    <div #planToPlayDiv class="status-scroll-box">
+      <div class="row status-header">
+        <div class="col m1 s2">
+          <img class="status-icon" src="assets/resources/images/plan-to-play-icon.png">
+        </div>
+        <h3 class="status-title col m3 s3">PLANEJO JOGAR</h3>
+        <h3 class="col m8 s7 status-details right-align">{{ this.gameCount[4] }} jogos na categoria.</h3>
+      </div>
+      <h5 *ngIf="this.gameCount[4] == 0">Categoria vazia</h5>
+      <div class="scroll">
+        <div class="scroll-item" *ngFor="let e of entries">
+          <app-game-container [routerLink]="['../../games/', e.gameId]" *ngIf="e.category == 5" [title]="this.games[e.gameId].title" [img]="this.games[e.gameId].image" [score]="e.score"></app-game-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

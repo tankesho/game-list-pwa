@@ -1,0 +1,44 @@
+input[type="text"] {
+  background-color: white;
+  border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
+  padding-left: 0.5rem;
+  border: medium solid #20247c;
+  width: 80%;
+}
+
+input[type="password"] {
+  background-color: white;
+  border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
+  padding-left: 0.5rem;
+  border: medium solid #20247c;
+  width: 80%;
+}
+
+input[type="email"] {
+  background-color: white;
+  border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
+  padding-left: 0.5rem;
+  border: medium solid #20247c;
+  width: 80%;
+}
+
+label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #20247c;
+}
+
+.form-div {
+  border-left: thick solid #20247c;
+  padding: 0 0 0.5rem 0.5rem;
+}
+
+h3 {
+  color: white;
+}
+
+.sign-in-link {
+  border-bottom: medium solid #20247c;
+  color:#20247c;
+  width: 15%;
+}

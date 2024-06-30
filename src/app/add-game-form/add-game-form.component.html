@@ -1,0 +1,72 @@
+<div [hidden]="this.logged">
+  <h2>VOCÊ PRECISA ESTAR LOGADO PARA ADICIONAR JOGOS A SUA LISTA!</h2>
+  <a routerLink="../../login" class="sign-in-link">FAÇA LOGIN</a>
+</div>
+<div class="row" [hidden]="!this.logged">
+  <div
+    id="msg-sign-in"
+    class="card-panel white-text"
+    [class.red]="!this.isSuccess"
+    [class.blue]="this.isSuccess"
+    *ngIf="this.isShowMessage"
+  >
+    {{ this.message }}
+  </div>
+<div class="add-game form-div indigo lighten-4 container">
+  <form #form="ngForm" (ngSubmit)="ngOnSubmit()">
+    <h1>Adicionar a lista.</h1>
+    <div class="row">
+      <div class="col s8">
+        <div class="category-div">
+          <label>Categoria</label>
+          <div>
+            <select [(ngModel)]="this.entry.category" name="input-category" class="select-cust browser-default">
+              <option value="-" disabled>-</option>
+              <option value="1">Jogando</option>
+              <option value="2">Zerado</option>
+              <option value="3">Em espera</option>
+              <option value="4">Droppado</option>
+              <option value="5">Planejo jogar</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label for="hours-played">Horas jogadas</label><br>
+          <input [(ngModel)]="this.entry.hoursPlayed" value="{{this.entry.hoursPlayed}}" name="input-hoursPlayed" id="hours-played" type="number" class="validate">
+        </div>
+      </div>
+      <div class="col s4">
+        <div class="score-div">
+          <label>Nota</label>
+          <div>
+            <select
+              [(ngModel)]="this.entry.score"
+              name="input-score"
+              class="select-cust browser-default">
+              <option value="-" disabled [selected]="!this.entry.score">-</option>
+              <option value="10" [selected]="this.entry.score==10">10</option>
+              <option value="9" [selected]="this.entry.score==9">9</option>
+              <option value="8" [selected]="this.entry.score==8">8</option>
+              <option value="7" [selected]="this.entry.score==7">7</option>
+              <option value="6" [selected]="this.entry.score==6">6</option>
+              <option value="5" [selected]="this.entry.score==5">5</option>
+              <option value="4" [selected]="this.entry.score==4">4</option>
+              <option value="3" [selected]="this.entry.score==3">3</option>
+              <option value="2" [selected]="this.entry.score==2">2</option>
+              <option value="1" [selected]="this.entry.score==1">1</option>
+              <option value="0" [selected]="this.entry.score==0">0</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <button
+        [disabled]="!form.valid"
+        class="btn waves-effect waves-light indigo darken-4 col12 add-buttom"
+        type="submit"
+        name="action">
+        Enviar
+      </button>
+    </div>
+  </form>
+  <button [disabled]="!form.valid" [hidden]="this.game" class="btn waves-effect waves-light red darken-4 col12 add-buttom" type="submit" (click)="onDelete()" name="action">Excluir</button>
+</div>

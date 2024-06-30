@@ -1,0 +1,26 @@
+.scroll-image {
+  height: 18rem;
+}
+
+.scroll-item > p {
+  margin-bottom: 0;
+}
+
+.text-over {
+  margin-top: -41%;
+  width: 95%;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.text-over > p {
+  color: white;
+}
+
+.scroll-item {
+  width: 13rem;
+}
+
+.scroll-item:hover {
+  cursor: pointer;
+}

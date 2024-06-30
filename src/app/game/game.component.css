@@ -1,0 +1,60 @@
+.game-illus {
+  padding: 1rem;
+}
+
+.game-box {
+  background-color: #20247c;
+}
+
+.game-box > div {
+  padding-left: 0;
+  padding-right: 1rem;
+}
+
+.details-box > div > h2 {
+  color: white;
+}
+
+.details-box > div > div {
+  margin: 0;
+}
+
+.info-type {
+  color:#bcc4f4;
+}
+
+.info {
+  color:white;
+}
+
+.score {
+  color: #64f474;
+}
+
+.info-title {
+  margin: 1rem;
+}
+
+.info-type {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.info {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+h3 {
+  color: white;
+}
+
+.login-link {
+  border-bottom: medium solid #20247c;
+  color:#20247c;
+  width: 15%;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}

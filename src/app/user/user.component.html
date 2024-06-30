@@ -1,0 +1,107 @@
+<div class="container">
+  <div class="row"><h1 class="title col s12 center-align">Crie uma conta para usar GAMELIST</h1></div>
+  <div class="form-div indigo lighten-4">
+    <div class="row">
+      <h2 class="col s10">CRIAR CONTA.</h2>
+      <h3 class="col s2 right-align red lighten-1">NOVO NO SITE?</h3>
+    </div>
+    <div class="row">
+      <div
+        id="msg-sign-in"
+        class="card-panel white-text"
+        [class.red]="!this.isSuccess"
+        [class.blue]="this.isSuccess"
+        *ngIf="this.isShowMessage"
+      >
+        {{ this.message }}
+      </div>
+      <form class="col s12" #form="ngForm" (ngSubmit)="ngOnSubmit()">
+        <div class="row">
+          <div class=" col s6">
+            <label for="input-username">Nome de usuário</label><br>
+            <input
+              id="input-username"
+              name="input-username"
+              type="text"
+              class="validate"
+              [(ngModel)]="this.user.username"
+              pattern="^[a-zà-úA-ZÀ-Ú0-9]([._-](?![._-])|[a-zà-úA-ZÀ-Ú0-9]){6,18}[a-zà-úA-ZÀ-Ú0-9]$"
+              #username="ngModel"
+              [class.valid]="username.valid"
+              [class.invalid]="username.invalid && !username.untouched"
+              required
+            />
+            <div class="red-text" [hidden]="username.valid || username.untouched">
+              Insira um nome de usuário válido.
+            </div>
+          </div>
+          <div class=" col s6">
+            <label for="input-email">E-mail</label><br>
+            <input
+              id="input-email"
+              name="input-email"
+              type="email"
+              class="validate"
+              [(ngModel)]="this.user.email"
+              pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+              #email="ngModel"
+              [class.valid]="email.valid"
+              [class.invalid]="email.invalid && !email.untouched"
+              required
+              />
+              <div class="red-text" [hidden]="email.valid || email.untouched">
+                Insira um e-mail válido.
+              </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class=" col s6">
+            <label for="input-password">Senha</label><br>
+            <input
+              id="input-password"
+              name="input-password"
+              type="password"
+              class="validate"
+              [(ngModel)]="this.user.password"
+              pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,60}$"
+              #password="ngModel"
+              [class.valid]="password.valid"
+              [class.invalid]="password.invalid && !password.untouched"
+              required
+            />
+            <div class="red-text" [hidden]="password.valid || password.untouched">
+              Insira uma senha válida.
+            </div>
+          </div>
+          <div class=" col s6">
+            <label for="input-user-repassword">Repetir senha</label><br>
+            <input
+              id="input-user-repassword"
+              name="input-user-repassword"
+              type="password"
+              class="validate"
+              [(ngModel)]="this.userRepassword"
+              pattern="{{ password.value }}"
+              #repassword="ngModel"
+              [class.valid]="repassword.valid"
+              [class.invalid]="repassword.invalid && password.valid|| !repassword.untouched"
+              required
+            />
+            <div class="red-text" [hidden]="repassword.valid && password.valid|| repassword.untouched">
+              O valor inserido não corresponde aos requerimentos.
+            </div>
+          </div>
+        </div>
+        <button
+          class="btn waves-effect waves-light indigo darken-4 col12"
+          type="submit"
+          [disabled]="!form.valid"
+          name="action">Criar conta
+        </button>
+      </form>
+    </div>
+  </div>
+  <h2>OU, SE JÁ POSSUI UMA CONTA...</h2>
+  <a routerLink="../login" class="sign-in-link">FAÇA LOGIN</a>
+</div>
+

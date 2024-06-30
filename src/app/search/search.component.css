@@ -1,0 +1,24 @@
+.filter {
+  font-weight: bold;
+}
+
+.filter-box {
+  border-bottom: medium solid #20247c;
+  padding-bottom: 1rem;
+}
+
+.results-box > div > div > img {
+  width: 100%;
+}
+
+.search-container {
+  display: inline-block;
+}
+
+input[type="text"] {
+  background-color: white;
+  border-radius: 0.3rem 0.3rem 0.3rem 0.3rem;
+  padding-left: 0.5rem;
+  border: medium solid #20247c;
+  height: 2rem;
+}

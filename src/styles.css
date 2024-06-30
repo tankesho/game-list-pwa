@@ -1,0 +1,49 @@
+@import "~materialize-css/dist/css/materialize.css";
+@import "~material-icons/iconfont/material-icons.css";
+
+html {
+  font-family: 'Inria Sans', sans-serif;
+  color: #20247c;
+  height: 100%;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.title {
+  border-left: thick solid #20247c;
+  border-bottom: thick solid #20247c;
+  border-top: medium solid #20247c;
+  border-right: medium solid #20247c;
+  padding: 3px;
+  font-weight: bold;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+body {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+  min-height: 100%;
+  margin: 0;
+}

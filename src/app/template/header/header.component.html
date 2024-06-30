@@ -1,0 +1,51 @@
+<nav>
+  <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+  <div class="nav-wrapper indigo darken-4">
+    <div class="col s10">
+      <a routerLink="" class="brand-logo valign-wrapper">
+        <img class="my-logo" src="assets/resources/images/logo.png">
+      </a>
+    </div>
+    <div id="nav-mobile" class="right hide-on-med-and-down">
+      <ul>
+        <div *ngIf="!this.logged">
+          <li><a routerLink="games" class="account-button">JOGOS</a></li>
+          <li><a routerLink="users" class="account-button">CRIAR CONTA</a></li>
+          <li><a routerLink="login" class="account-button">LOGIN</a></li>
+        </div>
+        <div *ngIf="this.logged">
+          <li><a routerLink="games" class="account-button">JOGOS</a></li>
+          <li ><a [routerLink]="['users', this.user]" class="account-button">SUA LISTA</a></li>
+          <li>
+            <a class="account-button" routerLink="users" class="flow-text" (click)="onLogout()">Sair</a>
+          </li>
+        </div>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<ul class="sidenav indigo darken-4" id="mobile-demo">
+  <div class="row">
+    <div class="col s8 offset-s2">
+      <div class="center">
+        <img
+          class="responsive-img"
+          src="assets/resources/images/logo.png"
+        />
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!this.logged">
+    <li><a routerLink="games" class="account-button">JOGOS</a></li>
+    <li><a routerLink="users" class="account-button">CRIAR CONTA</a></li>
+    <li><a routerLink="login" class="account-button">LOGIN</a></li>
+  </div>
+  <div *ngIf="this.logged">
+    <li><a routerLink="games" class="account-button">JOGOS</a></li>
+    <li ><a [routerLink]="['users', this.user]" class="account-button">SUA LISTA</a></li>
+    <li>
+      <a class="account-button" (click)="onLogout()">Sair</a>
+    </li>
+  </div>
+</ul>

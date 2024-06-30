@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <h1 class="title col s12 center-align" *ngIf="this.search != ''">Resultados da busca para: {{ this.search }}</h1>
+    <h1 class="title col s12 center-align" *ngIf="this.search == ''">Listando todos os jogos</h1>
+  </div>
+  <div class="filter-box row">
+    <form class="center-align col m4" #form="ngForm" (ngSubmit)="ngOnSubmit()">
+      <input
+        class="search-bar col m8"
+        type="text"
+        id="input-search"
+        name="input-search"
+        [(ngModel)]="this.search">
+      <button class="btn waves-effect waves-light indigo darken-4 col12 add-buttom m4" type="submit">Buscar</button>
+    </form>
+  </div>
+  <div class="results-box">
+    <div class="row">
+      <div class="col m2 s6" *ngFor="let g of this.queriedGames">
+        <app-game-container [routerLink]="['../games/', g.id]" [title]="this.games[g.id].title" [img]="this.games[g.id].image" [score]=0></app-game-container>
+      </div>
+    </div>
+  </div>
+</div>

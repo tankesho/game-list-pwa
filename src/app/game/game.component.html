@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row container">
+    <h1 class="title col s12 center-align">{{ this.game.title | uppercase }}</h1>
+  </div>
+  <div class="game-box row">
+    <div class="col s4">
+      <img class="game-illus responsive-img" src="{{this.game.image}}">
+    </div>
+    <div class="details-box col s8">
+      <div class="general-info">
+        <h2 class="info-title">INFORMAÇÕES GERAIS</h2>
+        <div class="row">
+          <h3 class="info-type col s6">Desenvolvedor</h3>
+          <h3 class="info col s6">{{this.game.developer}}</h3>
+        </div>
+        <div class="row">
+          <h3 class="info-type col s6">Distribuidora</h3>
+          <h3 class="info col s6">{{this.game.publisher}}</h3>
+        </div>
+        <div class="row">
+          <h3 class="info-type col s6">Lançado em</h3>
+          <h3 class="info col s6">{{this.game.launchDate}}</h3>
+        </div>
+        <div class="row">
+          <h3 class="info-type col s6">Gênero</h3>
+          <h3 class="info col s6">{{this.game.genre}}</h3>
+        </div>
+        <div class="row">
+          <h3 class="info-type col s6">Sinopse</h3>
+          <h3 class="info col s6">{{this.game.description}}</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <app-add-game-form
+    [game]="this.game">
+  </app-add-game-form>
+</div>

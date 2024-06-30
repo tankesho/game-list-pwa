@@ -1,0 +1,29 @@
+<nav>
+  <div class="nav-wrapper indigo darken-4 row">
+    <div class="col s7">
+      <a routerLink="" class="brand-logo valign-wrapper">
+        <img class="my-logo" src="/assets/resources/images/logo.png">
+      </a>
+    </div>
+    <div class="col s3">
+      <form class="search-form">
+        <div class="input-field row">
+          <div class="col s9">
+            <input placeholder="Pesquise por um jogo" id="search" type="text" class="validate">
+            <label for="search"></label>
+          </div>
+          <button class="col s3 btn-large indigo lighten-4" type="submit" (click)="searchQuery()" name="action">
+            <p>buscar</p>
+          </button>
+        </div>
+      </form>
+    </div>
+    <div class="col s2">
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a routerLink="sign_in" class="account-button">CRIAR CONTA</a></li>
+        <li><a routerLink="login" class="account-button">LOGIN</a></li>
+        <li ><a class="account-button" [hidden]="this.hide">SUA LISTA</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

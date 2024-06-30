@@ -1,0 +1,125 @@
+.title {
+  background-color: white;
+  width: 100%;
+}
+
+.title-div > div {
+  margin-bottom: 0;
+}
+
+.bar {
+  height: 1rem;
+  padding: 3px;
+}
+
+.green-bar {
+  background-color: #0cd424;
+  height: 1rem;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.blue-bar {
+  background-color: #3ca4fc;
+  height: 1rem;
+}
+
+.yellow-bar {
+  background-color: #f4d43c;
+  height: 1rem;
+}
+
+.red-bar {
+  background-color: #d40404;
+  height: 1rem;
+}
+
+.orange-bar {
+  background-color: #fc843c;
+  height: 1rem;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.status-box {
+  padding: 1rem;
+  border-left: thick solid #20247c;
+}
+
+.list-link {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  height: 2rem;
+  color: #20247c;
+}
+
+.status-box-left {
+  border-right: thick solid #20247c;
+}
+
+.button-full-list {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+
+.status-line {
+  margin-bottom: 0;
+}
+
+.below-box {
+  margin-bottom: 0;
+}
+
+.scroll {
+  overflow: auto;
+  white-space: nowrap;
+}
+
+.scroll-item {
+  display: inline-block;
+}
+
+.status-title {
+  margin-top: 0.8rem;
+}
+
+.status-icon {
+  width: 2.5rem;
+}
+
+.scroll-box {
+  height: 1rem;
+}
+
+.status-details {
+  margin-top: 0.7rem;
+}
+
+.status-header {
+  border-bottom: thick solid #20247c;
+  margin-bottom: 1;
+}
+
+.status-scroll-box {
+  margin-top: 2rem;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: white;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #bcc4f4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #adb0dc;
+}
+
+a:hover {
+  cursor: pointer;
+}
