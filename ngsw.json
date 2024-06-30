@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1719784116357,
+  "timestamp": 1719784358512,
   "index": "/game-list/index.html",
   "assetGroups": [
     {
@@ -140,7 +140,7 @@
     "/game-list/assets/resources/images/twitter.png": "bcde4d64bb9e761d89e767f634a4b6845ec9dc59",
     "/game-list/background.f6dce9a147097166.jpg": "4341a0b6bda88cb30bb47e60afefb3facd0a7434",
     "/game-list/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/game-list/index.html": "b54dcfc04492eff4542f8e2c7c7c3466d3636a2b",
+    "/game-list/index.html": "0f06acb6e1bd09e3185054fceac3636b5b09844e",
     "/game-list/main.427d19c14404e8a5.js": "2560f481794e7ff9de52e32d1ad0d0567407ad4f",
     "/game-list/manifest.webmanifest": "ece05143f91c618d5935c152abb0c15ad52e03a7",
     "/game-list/material-icons-outlined.78a93b2079680a08.woff": "b52ccd8fca4199d257b2a9fe377db29862f2853e",
