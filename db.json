@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "0",
+      "username": "alexandre",
+      "email": "takeoga@hotmail.com",
+      "password": "qwerty123",
+      "isAdmin": "true"
+    },
+    {
+      "id": "1",
+      "username": "fulano123",
+      "email": "fulano123@hotmail.com",
+      "password": "qwerty123",
+      "isAdmin": "false"
+    }
+  ],
+  "entries": [
+    {
+      "id": 2,
+      "category": "3",
+      "hoursPlayed": 0,
+      "score": 0,
+      "gameId": 4,
+      "userId": 1
+    }
+  ]
+}

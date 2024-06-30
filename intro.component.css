@@ -1,0 +1,42 @@
+.site-bg {
+  background-image: url("/assets/resources/images/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 120vh;
+}
+
+.title {background-color: white;}
+
+.title-div {
+  background-color:#20247c;
+}
+
+.title-div > div {
+  margin-bottom: 0;
+}
+
+.logo {
+  padding-top: 5rem;
+}
+
+.login-link {
+  border-bottom: medium solid #20247c;
+  color:#20247c;
+  width: 15%;
+}
+
+.sign-in-link {
+  border-bottom: medium solid #20247c;
+  color:#20247c;
+  width: 15%;
+}
+
+.options-div {
+  padding: 1rem;
+  margin-top: 5rem;
+  width: 52%;
+  margin-left:24%;
+  border-left: thick solid #20247c;
+}
+

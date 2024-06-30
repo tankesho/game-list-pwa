@@ -1,0 +1,9 @@
+{
+  "/usuarios": "/users",
+  "/usuarios/:id": "/users/:id",
+  "/jogos/": "/games",
+  "/jogos/:id": "/games/:id",
+  "/registros": "/entries",
+  "/registros/:id": "/entries/:id",
+  "/registros/:u/:g": "/entries?userId=:u&gameId=:g"
+}
