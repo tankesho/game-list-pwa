@@ -15,14 +15,5 @@
       "isAdmin": "false"
     }
   ],
-  "entries": [
-    {
-      "id": 2,
-      "category": "3",
-      "hoursPlayed": 0,
-      "score": 0,
-      "gameId": 4,
-      "userId": 1
-    }
-  ]
+  "entries": []
 }
