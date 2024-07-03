@@ -31,7 +31,7 @@ export class Shared {
     localStorage.setItem(Constants.GAMES_KEY, JSON.stringify(games));
     localStorage.setItem(Constants.USERS_KEY, JSON.stringify([]));
     localStorage.setItem(Constants.LOGGED_IN_KEY, JSON.stringify(false));
-    localStorage.setItem(Constants.LOGGED_USER, '');
-    localStorage.setItem(Constants.INIT, '');
+    localStorage.setItem(Constants.LOGGED_USER, "");
+    localStorage.setItem(Constants.INIT, "");
   }
 }

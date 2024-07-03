@@ -4,8 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href=/game-list/",
-    "ghpages": "angular-cli-ghpages --dir=dist/game-list --repo=https://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@github.com/tankesho/game-list.git --name=tankesho --email=takeoga@hotmail.com",
+    "build": "ng build --base-href=/game-list-pwa/",
+    "ghpages": "angular-cli-ghpages --dir=dist/game-list-pwa --repo=https://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@github.com/tankesho/game-list-pwa.git --name=tankesho --email=takeoga@hotmail.com",
     "deploy": "npm run build & npm run ghpages",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
@@ -21,6 +21,7 @@
     "@angular/forms": "^16.2.12",
     "@angular/platform-browser": "^16.2.12",
     "@angular/platform-browser-dynamic": "^16.2.12",
+    "@angular/pwa": "^16.2.14",
     "@angular/router": "^16.2.12",
     "@angular/service-worker": "^16.2.12",
     "@babel/core": "^7.24.6",
